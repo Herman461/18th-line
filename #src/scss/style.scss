@@ -1,0 +1,56 @@
+
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1230;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+@import "fonts.scss";
+@import "reset.scss";
+@import "ui.scss";
+@import "ibg.scss";
+@import "swiper.scss";
+@import "header.scss";
+@import "home.scss";
+a {
+	color: #fff;
+}
+body {
+	color: #fff;
+	font-size: 14px;
+	font-family: "Gothic";
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0px 25px;
+}
+
+.page {
+	flex: 1 1 auto;
+	// padding: 0px 0px 0px 0px;
+}

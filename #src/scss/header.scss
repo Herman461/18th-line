@@ -1,0 +1,213 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+   &__container {
+      display: flex;
+      align-items: center;
+      height: 83px;
+      border-bottom: 1px solid #fff;
+      @media (max-width: $md2+px) {
+         justify-content: space-between;
+      }
+   }
+
+   &__logo {
+      flex: 0 0 49px;
+      img {
+         max-width: 100%;
+      }
+   }
+
+   &__menu {
+      @media (min-width: $md2+px) {
+         flex: 1 1 auto;
+      }
+      padding: 0px 0px 0px 49px;
+   }
+}
+//=================================================================================================================================
+.menu {
+   &__header {
+   }
+
+   &__content {
+      @media (max-width: $md2+px) {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         transition: all ease 0.3s 0s;
+         background-color: #444;
+         overflow: auto;
+         z-index: 2;
+         padding: 70px 0px 22px 0px;
+         &._active {
+				top: 0;
+				
+         }
+      }
+   }
+   &__body {
+      @media (min-width: $md2+px) {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+   &__column {
+   }
+
+   &__list {
+      display: flex;
+      @media (max-width: $md2+px) {
+         display: block;
+         &_n {
+            display: none;
+         }
+      }
+      li {
+         margin: 0px 42px 0px 0px;
+         @media (max-width: $md1+px) {
+            margin: 0px 30px 0px 0px;
+         }
+         &:last-child {
+            margin: 0;
+         }
+         @media (max-width: $md2+px) {
+            border-bottom: 1px solid rgba(247, 244, 238, 0.4);
+            margin: 0;
+         }
+      }
+   }
+
+   &__link {
+      color: #444;
+      &_w {
+         color: #fff;
+      }
+      @media (max-width: $md2+px) {
+         display: block;
+         padding: 17px 25px;
+         font-size: 20px;
+      }
+   }
+
+   &__footer {
+   }
+}
+
+.top-menu {
+	transition: background 0.3s ease 0s;
+	&__title {
+      font-size: 27px;
+      flex: 1 1 auto;
+      display: none;
+   }
+   @media (max-width: $md2+px) {
+      &._active {
+         padding: 0px 25px;
+         height: 70px;
+         display: flex;
+         align-items: center;
+         border-bottom: 1px solid rgba(247, 244, 238, 0.4);
+         background-color: #444;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 3;
+      }
+		&._active .top-menu__title {
+			display: block;
+		}
+   }
+
+
+   &__icon {
+   }
+}
+
+.footer-menu {
+   padding: 35px 25px 0px 25px;
+   @media (min-width: $md2+px) {
+      display: none;
+   }
+   @media (min-width: 414px) {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__column {
+   }
+
+   &__label {
+      font-size: 17px;
+      margin: 0px 0px 7px 0px;
+   }
+
+   &__phone-number {
+      font-size: 20px;
+   }
+
+   &__schedule {
+      @media (max-width: 414px) {
+         margin: 0px 0px 13px 0px;
+      }
+      span {
+         display: block;
+
+         font-size: 17px;
+         margin: 0px 0px 7px 0px;
+         &:last-child {
+            margin: 0;
+         }
+         @media (min-width: 414px) {
+            text-align: right;
+         }
+      }
+   }
+}
+
+.icon-menu {
+   @media (max-width: $md2+px) {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 3;
+      span {
+         transition: all 0.3s ease 0s;
+         position: absolute;
+         left: 0px;
+         top: calc(50% - 1px);
+         width: 100%;
+         height: 2px;
+         background-color: #fff;
+      }
+      span:first-child {
+         top: 0px;
+      }
+      span:last-child {
+         top: auto;
+         bottom: 0px;
+      }
+      &._active {
+         span {
+            transform: scale(0);
+            &:first-child {
+               transform: rotate(-45deg);
+               top: calc(50% - 1px);
+            }
+            &:last-child {
+               transform: rotate(45deg);
+               bottom: calc(50% - 1px);
+            }
+         }
+      }
+   }
+}
