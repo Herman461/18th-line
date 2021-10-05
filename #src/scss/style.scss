@@ -19,11 +19,12 @@ $md2: 991.98;
 $md3: 767.98;
 @import "fonts.scss";
 @import "reset.scss";
-@import "ui.scss";
+
 @import "ibg.scss";
 @import "swiper.scss";
 @import "header.scss";
 @import "home.scss";
+@import "ui.scss";
 a {
 	color: #fff;
 }
