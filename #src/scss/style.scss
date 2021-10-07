@@ -50,6 +50,9 @@ body {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
 	padding: 0px 25px;
+	@media (max-width: 414px) {
+		padding: 0px 15px;
+	}
 }
 
 .page {

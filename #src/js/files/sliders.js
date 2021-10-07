@@ -243,6 +243,7 @@ if (window.matchMedia('(min-width: 991.98px)').matches) {
 window.addEventListener('resize', function () {
    if (window.matchMedia('(min-width: 991.98px)').matches) {
       ourPartnersBody.classList.add('disabled');
+		ourPartnersSliderLine.classList.add('disabled');
    } else {
       if (ourPartnersBody.classList.contains('disabled')) {
          ourPartnersBody.classList.remove('disabled');
