@@ -21,7 +21,6 @@
 	&__content {
 		height: 100%;
 		display: flex;
-		align-items: center;
 		flex-direction: column;
 		justify-content: center;
 	}
@@ -35,30 +34,6 @@
 
 	&__footer {
 		flex: 0 0 auto;
-	}
-
-	&__arrows {
-	}
-
-	&__arrow {
-
-		&_l {
-		}
-
-		&_r {
-		}
-	}
-
-	&__project {
-	}
-
-	&__info {
-	}
-
-	&__fraction {
-	}
-
-	&__link {
 	}
 }
 
@@ -200,18 +175,28 @@
 		@media (max-width: $md2+px) {
 			font-size: 32px;
 		}
+		@media (max-width: 414px) {
+			font-size: 28px;
+		}
 	}
 
 	&__text {
 		font-size: 16px;
 		line-height: 20 / 16 * 100%;
+
 	}
 
 	&__btn {
+		display: inline-block;
+		padding: 0px 0px 7px 0px;
+		margin: 40px 0px 0px 0px;
+		border-bottom: 1px solid #fff;
+		@media (max-width: $md2+px) {
+			margin: 30px 0px 0px 0px;
+		}
 	}
 }
-.btn {
-}
+
 .project-mainslider {
 
 	&__name {
@@ -231,28 +216,44 @@
 	}
 
 	&__total {
+		
 	}
 }
 //=================================================================================================================================
 
 .category-list {
 	margin: 0px 0px 120px 0px;
+	@media (max-width: $md2+px) {
+		margin: 0px 0px 67px 0px;
+	}
 	&__container {
 	}
 
 	&__title {
 		margin: 0px 0px 40px 0px;
+
 	}
 
 	&__items {
-		display: flex;
-		margin: 0px -12px;
+
+		@media (min-width: 520px) {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0px -12px;
+		}
 	}
 
 	&__item {
 		height: 220px;
-		flex: 0 1 25%;
-		padding: 0px 12px;
+
+		@media (max-width: $md2+px) {
+			flex: 0 1 50%;
+			margin: 0px 0px 24px 0px;
+		}
+		@media (min-width: 520px) {
+			flex: 0 1 25%;
+			padding: 0px 12px;
+		}
 	}
 }
 
@@ -262,40 +263,80 @@
 .popular-products {
 	margin: 0px 0px 150px 0px;
 	&__container {
+		// @media (min-width: 380px) and (max-width: 640px) {
+		// 	padding: 0;
+		// }
 	}
 
 	&__title {
 		margin: 0px 0px 47px 0px;
+		// @media (min-width: 380px) and (max-width: 640px) {
+		// 	padding: 0px 25px;
+		// }
+		@media (max-width: $md1+px) {
+			margin: 0px 0px 28px 0px;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 20px 0px;
+		}
 	}
 
 	&__body {
-		margin: 0px 0px 32px 0px;
+		// @media (min-width: 380px) and (max-width: 640px) {
+		// 	padding: 0px 0px 0px 25px;
+		// }
+		// @media (min-width: 380px) and (max-width: 640px) {
+		// 	padding: 0px 25px;
+		// }
+		overflow: visible;
 	}
 	&__slider-line {
+		// @media (min-width: 380px) and (max-width: 640px) {
+		// 	padding: 0px 25px;
+		// }
 	}
 	
 }
 .popular-products .swiper-slide {
 	height: auto;
+	
 }
+//=================================================================================================================================
+
 .title {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+
+	@media (min-width: $md1+px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 	&__main {
-		flex: 1 1 auto;
-		font-size: 35px;
+		font-size: 32px;
 		color: #444;
+		@media (min-width: $md1+px) {
+			flex: 1 1 auto;
+		}
+		@media (min-width: $md3+px) and (max-width: $md1+px) {
+			margin: 0px 0px 20px 0px;
+		}
+		@media (max-width: 380px) {
+			font-size: 27px;
+		}
 	}
 
 	&__items {
 		display: flex;
-		margin: 0px 0px 0px 20px;
+		@media (max-width: $md3+px) {
+			display: none;
+		}
 		li {
 			margin: 0px 59px 0px 0px;
 			&:last-child {
 				margin: 0;
 			}
+		}
+		@media (min-width: $md1+px) {
+			margin: 0px 0px 0px 20px;
 		}
 	}
 
@@ -344,6 +385,9 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+		@media (max-width: $md1+px) {
+			padding: 15px;
+		}
 	}
 
 	&__title {
@@ -384,11 +428,12 @@
 
 }
 .slider-line {
-
+	margin: 30px 0px 0px 0px;
 	@media (min-width: $md2+px) {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		margin: 55px 0px 0px 0px;
 	}
 	&__info {
 	}
@@ -466,4 +511,134 @@
 		}
 	}
 }
-// Решить проблему с высотой слайдера при адаптиве, попробывать следать флекс оболочку
+//=================================================================================================================================
+
+.our-projects {
+	margin: 0px 0px 115px 0px;
+	&__container {
+	}
+
+	&__body {
+		height: 461px;
+		width: 95%;
+		
+		overflow: visible;
+		margin: 0px auto 40px auto;
+		@media (max-width: $md2+px) {
+			height: 300px;
+			width: 100%;
+		}
+		@media (min-width: 414px) {
+			padding: 0px 20px;
+		}
+	}
+
+	&__slider-line {
+	}
+	&__title {
+		margin: 0px 0px 35px 0px;
+	}
+}
+
+.projects-item {
+	
+	position: relative;
+	z-index: 2;
+	padding: 24px 33px;
+	height: 100%;
+	@media (max-width: $md2+px) {
+		padding: 17px 23px;
+	}
+	@media (min-width: 414px) {
+		display: flex;
+		align-items: flex-end;
+	}
+	@media (max-width: 414px) {
+		
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 7px;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		@media (max-width: 414px) {
+			flex-direction: column;
+			align-items: flex-start;
+			height: 100%;
+		}
+	}
+
+	&__name {
+		font-size: 16px;
+	}
+
+	&__btn {
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		display: inline-flex;
+		padding: 0px 34px 7px 0px;
+		border-bottom: 1px solid #fff;
+		background: url('../img/icons/btn-arrow-white.svg') right 2px no-repeat;
+	}
+}
+
+//=================================================================================================================================
+
+.our-partners {
+	margin: 0px 0px 128px 0px;
+	&__container {
+
+	}
+
+	&__title {
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__body {
+		height: 306px;
+		border-top: 1px solid #444;
+		border-left: 1px solid #444;
+		@media (max-width: $md3+px) {
+			height: 220px;
+		}
+		&.disabled .swiper-wrapper {
+			transform: translate3d(0px, 0, 0) !important;
+		}
+	}
+
+	
+	&__brand {
+		border-right: 1px solid #444;
+		border-bottom: 1px solid #444;
+		padding: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $md2+px) {
+			padding: 15px;
+		}
+
+	}
+}
+.slider-line.disabled {
+	display: none;
+}
+.our-partners .swiper-slide {
+	height: 50%;
+	overflow: hidden;
+}

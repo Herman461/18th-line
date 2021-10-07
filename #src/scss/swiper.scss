@@ -10,4 +10,11 @@
 		height: 100%;
 		width: 100%;
 	}
+	&.swiper-container-multirow-column > .swiper-wrapper {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
 }
+
+
+
